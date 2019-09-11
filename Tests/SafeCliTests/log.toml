@@ -1,0 +1,12 @@
+[appenders.async_console]
+kind = "async_console"
+
+[appenders.async_file]
+kind = "async_file"
+output_file_name = "Client.log"
+append = false
+file_timestamp = false
+
+[root]
+level = "debug"
+appenders = ["async_file", "async_console"] 

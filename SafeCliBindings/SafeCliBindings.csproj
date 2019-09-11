@@ -1,0 +1,19 @@
+﻿<Project Sdk="MSBuild.Sdk.Extras/2.0.41">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net461;netcoreapp2.2;</TargetFrameworks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net46' Or '$(TargetFramework)' == 'netcoreapp1.0' ">
+    <DefineConstants>__DESKTOP__</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SafeCliCore\SafeCliCore.csproj" />
+  </ItemGroup>
+</Project>
